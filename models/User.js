@@ -9,7 +9,15 @@ const UserSchema = new mongoose.Schema({
     email:{
         type: String,
         required: true
-    }
+    },
+    location:{
+        type: String,
+        required: true
+    },
+    // intrest:{
+    //   [{glass: {type: blu, default: false}}]
+    // }
+
 });
 
 
