@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.conInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.userHolder{
+    border: 3px solid black;
+    padding: 5px;
+
+}
+
+.userData{
+    display: flex;
+    text-align: center;
+}
+
+.navBar{
+    display: flex;
+    text-align: center;
+    list-style-type: none;
+}
+
+.dashboardItem{
+    padding: 25px;
+}
+
+.dashboardNumbers{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    margin-top: 50px;
+
+}
+
+.navLinks{
+    padding: 25px;
+
+}
+
+.userForm{
+
+}
+
+.mainImage{
+    width: 1000px;
+    height: 330px;
+    background-image: url('https://image.shutterstock.com/image-photo/sky-blue-background-cloud-clear-260nw-1386181790.jpg');
+    background-size: cover;
+    margin: 0 auto;
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+.aboutHolder{
+    display: flex;
+}
+
+.userForm{
+    border: 3px solid black;
+    padding: 5px;
+    width: 750px;
+    height: 250px;
+    margin: 0 auto;
+}
+
+.signUp{
+    display: flex;
+}
+
+.userInput{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+
+}
+
+.userInput label{
+    display: flex;
+    flex-direction: column;
+}
+
+.center{
+    text-align: center;
+}

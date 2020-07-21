@@ -4,11 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body>
-    <% for (let user of userInfo) { %>
-       <p><%= user.name %></p>
-       <p><%= user.email %></p> 
-    <% } %>
+    <%- include('./header') %>
+    <section class="conInfo">
+        <div class="totalMeb dashboardNumbers">
+            <h2><%= userInfo.length %></h2>
+            <h5>Total Members</h5>
+        </div>
+        <div class="totalWeek dashboardNumbers">
+            <h2><%= userInfo.length %></h2>
+            <h5>New Members this week</h5>
+        </div>
+        <div class="thisWeektopCity dashboardNumbers">
+            <h2><%= userInfo[0].location %></h2>
+            <h5>Top city this week</h5>
+        </div>
+    </section>
+
+    <section class="userHolder">
+        <div class="userData">
+            <h5 class="dashboardItem">Name</h5>
+            <h5 class="dashboardItem">Email</h5>
+            <h5 class="dashboardItem">Location</h5>
+            <h5 class="dashboardItem">Interests</h5>
+        </div>
+        <% for (let user of userInfo) { %>
+            <div class="userData">
+            <p class="dashboardItem"><%= user.name %></p>
+            <p class="dashboardItem"><%= user.email %></p>
+            <p class="dashboardItem"><%= user.location%></p> 
+        </div>
+         <% } %>
+
+    </section>
+
 </body>
 </html>

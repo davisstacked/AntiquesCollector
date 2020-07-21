@@ -18,7 +18,7 @@ const UserSchema = new mongoose.Schema({
     //   [{glass: {type: blu, default: false}}]
     // }
 
-});
+}, {timestamps: true});
 
 
 module.exports = mongoose.model('User', UserSchema);

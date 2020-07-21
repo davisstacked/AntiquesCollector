@@ -4,14 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
+    <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body>
+    <%- include('./header') %>
 
-    <form action="/" method="POST">
-        <input type="text" name="name" id="userName">
-        <input type="text" name="email" id="emailName">
-        <button type="submit">Submit</button>
-    </form>
+    <div class="mainImage">
+    </div>
+
+    <div class="about">
+        <h3>Why Join?</h3>
+        <div class="aboutHolder">
+            <div class="info">
+                <h4><b>Share Your cool finds</b></h4>
+                <p>Share your finds with others and feel like
+                    you’re part of a community of 100000 other
+                    people who love the same stuff as you! </p>
+            </div>
+
+            <div class="info">
+                <h4><b>Find events in your area</b></h4>
+                <p>Share your finds with others and feel like
+                    you’re part of a community of 100000 other
+                    people who love the same stuff as you! 
+                    </p>
+
+            </div>
+
+            <div class="info">
+                <h4><b>Explore</b></h4>
+                <p>Share your finds with others and feel like
+                    you’re part of a community of 100000 other
+                    people who love the same stuff as you!
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="userForm">
+        <h2 class="center">Join the Club</h2>
+        <h4 class="center">Join over 5,000 members to get special updates and the latest happenings.</h4>
+        <form action="/" method="POST" class="signUp">
+            <div class="userInput">
+                <label>First Name
+                <input type="text" name="name" id="userName">
+                </label>
+                <label>email
+                <input type="text" name="email" id="userEmail">
+            </label>
+                <label>City
+                <input type="text" name="location" id=userLocation>
+            </label>
+            </div>
+            <div class="userInput">
+                <button type="submit">Join the Club</button>
+            </div>
+            
+        </form>
+    </div>
+
+    <div class="events">
+        
+    </div>
     
 </body>
 </html>
