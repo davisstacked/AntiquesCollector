@@ -107,3 +107,11 @@ header{
 .center{
     text-align: center;
 }
+
+.placeholderImage{
+    width: 200px;
+    height: 200px;
+    background-image: url('https://image.shutterstock.com/image-photo/sky-blue-background-cloud-clear-260nw-1386181790.jpg');
+    background-size: cover;
+    margin: 0 auto;
+}
