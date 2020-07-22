@@ -20,9 +20,11 @@ closeBtn.addEventListener('click', (e) => {
 	dark.classList.add('hide');
 });
 
-successBtn.addEventListener('click', (e) => {
-	success.classList.add('hide');
-});
+if (success) {
+	successBtn.addEventListener('click', (e) => {
+		success.classList.add('hide');
+	});
+}
 
 // Validation
 
@@ -37,6 +39,7 @@ form.addEventListener('submit', (e) => {
 			allInputsValid = false;
 			error.textContent = validate(input).message;
 			error.classList.remove('hide');
+			input.style.border = '1px solid red';
 			e.preventDefault();
 		} else {
 			allInputsValid = true;
@@ -51,19 +54,12 @@ const validate = (element) => {
 		message: '',
 	};
 
-	const regEx = /^[a-zA-Z]{1,20},[a-zA-Z]{1,20}$/;
-
 	const email = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/g;
 
 	if (!element.value.length) {
 		respone.message = 'Please Input A Value';
 	} else if (!email.test(element.value) && element.id === 'userEmail') {
 		respone.message = 'Please enter a valid email';
-	} else if (
-		!regEx.test(element.value) &&
-		element.classList.contains('userLocation')
-	) {
-		respone.message = 'Please enter a valid city and state';
 	} else {
 		respone.isValid = true;
 	}

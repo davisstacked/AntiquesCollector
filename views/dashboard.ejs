@@ -9,7 +9,7 @@
 		/>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Dashboard</title>
+		<title>The Collector's Guild | Dashboard</title>
 		<link rel="stylesheet" href="/styles/main.css" />
 	</head>
 	<body>
@@ -55,7 +55,7 @@
 						</td>
 						<td class="dashboardItem interests-container">
 							<% for(let interest of user.interests){ %>
-							<p><%= interest %>,</p>
+							<p><%= interest %></p>
 							<% } %>
 						</td>
 						<td class="dashboardItem">
@@ -67,4 +67,17 @@
 			</section>
 		</main>
 	</body>
+	<script>
+		const interest = document.querySelectorAll('.interests-container');
+
+		interest.forEach((element) => {
+			const interests = element.querySelectorAll('p');
+			for (let i = 0; i < interests.length; i++) {
+				console.log(interests[i]);
+				if (i < interests.length - 1) {
+					interests[i].insertAdjacentText('beforeend', ', ');
+				}
+			}
+		});
+	</script>
 </html>
