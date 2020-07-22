@@ -20,7 +20,7 @@ a {
 .conInfo {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .userHolder {
@@ -29,8 +29,6 @@ a {
 }
 
 .userData {
-  display: flex;
-  text-align: center;
 }
 
 .navBar {
@@ -39,15 +37,25 @@ a {
   list-style-type: none;
 }
 
+main {
+  width: 70vw;
+  margin: 25px auto;
+}
+
 .dashboardItem {
   padding: 25px;
 }
 
 .dashboardNumbers {
+  margin: 50px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  background: white;
+  padding: 5% 7%;
+  border: 1px solid black;
+  box-shadow: 3px 3px 4px gray;
 }
 
 header {
@@ -352,6 +360,14 @@ input.userLocation {
   .userInput {
     margin: 0;
     padding-bottom: 10px;
+  }
+
+  .conInfo {
+    display: block;
+  }
+
+  tbody {
+    overflow-x: auto;
   }
 }
 
