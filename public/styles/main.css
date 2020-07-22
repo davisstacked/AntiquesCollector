@@ -113,7 +113,7 @@ header {
 }
 
 .about h3 {
-	font-size: 1.5em;
+	font-size: 2em;
 	margin-bottom: 22px;
 	font-weight: normal;
 }
@@ -123,6 +123,7 @@ header {
 	background-color: white;
 	margin: 0 15px;
 	width: 30%;
+	box-shadow: 0px 2px 4px gray;
 }
 
 .info:first-child {
@@ -136,6 +137,7 @@ header {
 .info h4 {
 	text-align: center;
 	margin-bottom: 7%;
+	font-size: 1.2em;
 }
 
 .aboutHolder {
@@ -148,7 +150,7 @@ header {
 	background-color: white;
 	box-shadow: 0px 2px 4px gray;
 	padding: 3%;
-	width: 70vw;
+	width: 80vw;
 	margin: 35px auto;
 }
 
@@ -165,6 +167,7 @@ header {
 .userForm h4 {
 	font-weight: normal;
 	margin-bottom: 20px;
+	font-size: 19px;
 }
 
 .error {
@@ -211,7 +214,7 @@ input.userLocation {
 }
 
 .city {
-	width: 60%;
+	width: 67%;
 }
 
 .city input {
@@ -263,7 +266,7 @@ label.location {
 }
 
 .events {
-	width: 70vw;
+	width: 80vw;
 	margin: 0 auto;
 	display: flex;
 	background: white;
