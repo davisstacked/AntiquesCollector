@@ -437,6 +437,7 @@ label.location {
 	}
 
 	.event-info-container {
+		font-size: 1.6em;
 		width: 100%;
 	}
 
@@ -487,7 +488,8 @@ label.location {
 
 .fa-check-circle {
 	color: #27ae60;
-	font-size: 2em;
+	font-size: 4em;
+	padding: 0 0 25px 0;
 }
 
 .success .fa-times {
@@ -496,4 +498,8 @@ label.location {
 	top: 10%;
 	right: 5%;
 	font-size: 2em;
+}
+
+.event-info-text{
+	font-size: 1.25em;
 }
