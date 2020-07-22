@@ -44,7 +44,7 @@ main {
 }
 
 .dashboardItem {
-	padding: 32px;
+	padding: 16px 32px;
 }
 
 .dashboard-info h2 {
@@ -418,6 +418,10 @@ button:hover {
 		width: 100%;
 	}
 
+	.about h3 {
+		font-size: 1.7em;
+	}
+
 	.aboutHolder {
 		flex-direction: column;
 	}
@@ -431,6 +435,7 @@ button:hover {
 		margin-left: 0;
 		margin-right: 0;
 		text-align: center;
+		padding: 30px 0 20px 0;
 	}
 
 	.userForm {
