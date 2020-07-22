@@ -345,6 +345,12 @@ button:hover {
 	background-color: #234255;
 }
 
+@media screen and (max-width: 1300px) {
+	.dashboardItem {
+		padding: 2%;
+	}
+}
+
 @media screen and (max-width: 768px) {
 	.desktop-nav {
 		display: none;
@@ -509,6 +515,6 @@ button:hover {
 	font-size: 2em;
 }
 
-.event-info-text{
+.event-info-text {
 	font-size: 1.25em;
 }
