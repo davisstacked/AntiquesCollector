@@ -32,9 +32,6 @@ h1 {
 	padding: 5px;
 }
 
-.userData {
-}
-
 .navBar {
 	display: flex;
 	text-align: center;
@@ -100,7 +97,7 @@ header {
 .mainImage {
 	width: 80vw;
 	height: 50vh;
-	background-image: url('https://image.shutterstock.com/image-photo/sky-blue-background-cloud-clear-260nw-1386181790.jpg');
+	background-image: url('/images/hero.png');
 	background-size: cover;
 	background-position: top center;
 	margin: 0 auto;
@@ -327,8 +324,9 @@ label.location {
 	.open,
 	.close {
 		position: fixed;
-		top: 2%;
-		left: 2.5%;
+		top: -7.5px;
+		left: 1%;
+		padding: 25px;
 		color: black;
 	}
 

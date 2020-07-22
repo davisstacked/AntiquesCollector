@@ -43,6 +43,7 @@
 						<th class="dashboardItem">Email</th>
 						<th class="dashboardItem">Location</th>
 						<th class="dashboardItem">Interests</th>
+						<th class="dashboardItem">Sign Up Date</th>
 					</tr>
 
 					<% for (let user of userInfo) { %>
@@ -56,6 +57,9 @@
 							<% for(let interest of user.interests){ %>
 							<p><%= interest %>,</p>
 							<% } %>
+						</td>
+						<td class="dashboardItem">
+							<p><%= new Date( user.createdAt).toLocaleDateString() %></p>
 						</td>
 					</tr>
 					<% } }%>
