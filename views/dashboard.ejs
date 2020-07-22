@@ -1,58 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-      crossorigin="anonymous"
-    />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="/styles/main.css" />
-  </head>
-  <body>
-    <%- include('./header') %>
-    <main>
-      <section class="dashboard-info">
-        <h2>The Collector's Guild</h2>
-        <h3>Dashboard</h3>
-      </section>
-      <section class="conInfo">
-        <% if(userInfo.length) {%>
-        <div class="totalMeb dashboardNumbers">
-          <h2><%= userInfo.length %></h2>
-          <h5>Total Members</h5>
-        </div>
-        <div class="totalWeek dashboardNumbers">
-          <h2><%= userInfo.length %></h2>
-          <h5>New Members this week</h5>
-        </div>
-        <div class="thisWeektopCity dashboardNumbers">
-          <h2><%= userInfo[0].location %></h2>
-          <h5>Top city this week</h5>
-        </div>
-      </section>
-      <h3>Member Table</h3>
-      <section class="userHolder">
-        <table>
-          <tr class="userData">
-            <th class="dashboardItem">Name</th>
-            <th class="dashboardItem">Email</th>
-            <th class="dashboardItem">Location</th>
-            <th class="dashboardItem">Interests</th>
-          </tr>
+	<head>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+			integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+			crossorigin="anonymous"
+		/>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dashboard</title>
+		<link rel="stylesheet" href="/styles/main.css" />
+	</head>
+	<body>
+		<main>
+			<section class="dashboard-info">
+				<h2>The Collector's Guild</h2>
+				<h3>Dashboard</h3>
+			</section>
+			<section class="conInfo">
+				<% if(userInfo.length) {%>
+				<div class="totalMeb dashboardNumbers">
+					<h2><%= userInfo.length %></h2>
+					<h5>Total Members</h5>
+				</div>
+				<div class="totalWeek dashboardNumbers">
+					<h2><%= userInfo.length %></h2>
+					<h5>New Members this week</h5>
+				</div>
+				<div class="thisWeektopCity dashboardNumbers">
+					<h2>
+						<%= userInfo[0].location.city%>, <%= userInfo[0].location.state%>
+					</h2>
+					<h5>Top city this week</h5>
+				</div>
+			</section>
+			<h3>Member Table</h3>
+			<section class="userHolder">
+				<table>
+					<tr class="userData">
+						<th class="dashboardItem">Name</th>
+						<th class="dashboardItem">Email</th>
+						<th class="dashboardItem">Location</th>
+						<th class="dashboardItem">Interests</th>
+					</tr>
 
-          <% for (let user of userInfo) { %>
-          <tr class="userData">
-            <td class="dashboardItem"><%= user.name %></td>
-            <td class="dashboardItem"><%= user.email %></td>
-            <td class="dashboardItem"><%= user.location%></td>
-          </tr>
-          <% } }%>
-        </table>
-      </section>
-    </main>
-  </body>
+					<% for (let user of userInfo) { %>
+					<tr class="userData">
+						<td class="dashboardItem"><%= user.name %></td>
+						<td class="dashboardItem"><%= user.email %></td>
+						<td class="dashboardItem">
+							<%= user.location.city%>, <%= user.location.state%>
+						</td>
+						<td class="dashboardItem interests-container">
+							<% for(let interest of user.interests){ %>
+							<p><%= interest %>,</p>
+							<% } %>
+						</td>
+					</tr>
+					<% } }%>
+				</table>
+			</section>
+		</main>
+	</body>
 </html>
