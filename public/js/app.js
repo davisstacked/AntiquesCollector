@@ -21,7 +21,6 @@ closeBtn.addEventListener('click', (e) => {
 const form = document.querySelector('.signUp');
 
 form.addEventListener('submit', (e) => {
-  e.preventDefault();
   const inputs = form.querySelectorAll('input[type=text]');
   let allInputsValid = true;
   inputs.forEach((input) => {
@@ -30,27 +29,12 @@ form.addEventListener('submit', (e) => {
       allInputsValid = false;
       error.textContent = validate(input).message;
       error.classList.remove('hide');
+      e.preventDefault();
     } else {
       allInputsValid = true;
       error.classList.add('hide');
     }
   });
-
-  if (allInputsValid) {
-    const formData = new FormData(form);
-    let data = {};
-    for (let pair of formData.entries()) {
-      console.log(pair);
-      console.log(pair[0] + ':' + pair[1]);
-      data[pair[0]] = pair[1];
-    }
-
-    console.log(data);
-    fetch('/', {
-        redirect: 'follow',
-        method: 'post',
-        body: data, // post body
-      })
 });
 
 const validate = (element) => {
