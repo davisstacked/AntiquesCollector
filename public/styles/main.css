@@ -252,7 +252,7 @@ label.location {
 }
 
 .interests button {
-	grid-column: 1/3;
+	grid-column: 1/2;
 	color: white;
 	background-color: #284b62;
 	border-radius: 50px;
@@ -319,7 +319,7 @@ label.location {
 	width: 50px;
 	outline: black;
 	background-size: 100%, 100%;
-	border: 1px solid black;
+
 	background-color: white;
 	background-image: none;
 }
@@ -334,6 +334,15 @@ label.location {
 	content: '<';
 	font-size: 27.5px;
 	color: black;
+}
+
+button:focus {
+	outline: 2px solid black;
+}
+
+button:focus,
+button:hover {
+	background-color: #234255;
 }
 
 @media screen and (max-width: 768px) {
