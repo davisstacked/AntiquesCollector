@@ -19,8 +19,8 @@ app.use(express.static(`${__dirname}/public`));
 
 // Custom Logger
 app.use((req, res, next) => {
-  console.log(`${req.method} ${req.url} ${new Date().toLocaleTimeString()}`);
-  next();
+	console.log(`${req.method} ${req.url} ${new Date().toLocaleTimeString()}`);
+	next();
 });
 
 //_________________ROUTES____________//

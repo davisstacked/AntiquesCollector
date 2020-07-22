@@ -422,3 +422,43 @@ label.location {
 .hide {
 	display: none !important;
 }
+
+.success-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.success {
+	background-color: #f4f4f4;
+	padding: 3%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 2px solid black;
+	border-radius: 25px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-ms-border-radius: 25px;
+	-o-border-radius: 25px;
+	position: relative;
+}
+
+.fa-check-circle {
+	color: #27ae60;
+	font-size: 2em;
+}
+
+.success .fa-times {
+	cursor: pointer;
+	position: absolute;
+	top: 10%;
+	right: 5%;
+	font-size: 2em;
+}
